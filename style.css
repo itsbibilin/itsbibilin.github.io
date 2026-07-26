@@ -1,0 +1,984 @@
+* {
+  outline: 1px solid #000;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #FDF7F1;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container{
+  width: 1296px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+  align-items: center;           
+  justify-content: space-between;
+}
+
+/* Navbar */
+
+.navbar{
+  max-width: 1920px;
+  width: 100%;
+  height: 64px;
+}
+
+.navbar .container{
+  max-width: 1296px;
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #1E1710; 
+  text-decoration: none;  
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* navbar mobile */
+
+@media (max-width: 767px) {
+  .navbar {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  .navbar .container {
+    height: 100%;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
+/* hero */
+
+.hero {
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero .container{
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deco {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* 像問號的東西 */
+.deco-1 {
+  width: 200px;
+  height: 198px;
+  top: 60px;
+  left: 780px;
+}
+
+/* 花生 */
+.deco-2 {
+  width: 160px;
+  height: 137px;
+  bottom: 60px;
+  right: 180px;
+}
+
+/* 右上花 */
+.deco-3 {
+  width: 140px;
+  height: 140px;
+  top: 240px;
+  right: 140px;
+}
+
+/* 左上虛虛線條 */
+.deco-4 {
+  width: 313px;
+  height: 92px;
+  top: 130px;
+  left: 240px;
+}
+
+/* 左下虛虛線條 */
+.deco-5 {
+  width: 180px;
+  height: 120px;
+  left: 520px;
+  bottom: 60px;
+}
+
+/* 左下花花 */
+.deco-6 {
+  width: 80px;
+  height: 80px;
+  left: 710px;
+  bottom: 150px;
+}
+
+/* 左上花花 */
+.deco-7 {
+  width: 140px;
+  height: 140px;
+  left: 100px;
+  top: 80px;
+}
+
+.hero .container img {
+  display: block;
+  max-width: 746px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero .left {
+  max-width: 526px;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+}
+
+.hero .top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1E1710;
+}
+
+.hero-desc {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #5A4F45;
+}
+
+.btn-primary, .btn-secondary {
+  border-radius: 999px;
+  padding: 12px 24px;
+  border: none;
+  color: #404040;
+  border: 1px solid #404040;
+  background-color: transparent;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover,.btn-secondary:hover{
+  background-color: transparent;
+  color: #fff;
+  background-color: #404040;
+}
+
+/* hero-mobile */
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .hero .container img {
+    order: 1;
+  }
+
+  .hero .left {
+    order: 2;
+  }
+
+  .hero .left {
+    max-width: none;
+    width: 100%;
+    gap: 32px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero .container img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .deco {
+    display: none;
+  }
+}
+
+
+/* section services */
+
+.services{
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+
+  padding: 80px;
+  background-color: #24140B;
+  color: #fff;
+}
+
+.services .container{
+  max-width: 1296px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.services .title{
+  width: 100%;
+}
+
+.card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card-item{
+  flex: 1;
+  max-width: 306px;
+  padding: 24px;
+  color: #000;
+  background-color: #FDF7F1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.top .title{
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column; /* tag 在上，name 在下 */
+  gap: 4px;
+}
+
+.card-tag{
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.15px;
+}
+
+.card-name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+
+}
+
+.material-symbols-outlined{
+  width: 28px;
+  height: 28px;
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.card-desc {
+  flex: 1;
+  min-width: 0;
+}
+
+.bottom img{
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 768px) {
+
+  .services {
+    padding: 40px 0 40px 20px; /* 右邊不留 padding，讓卡片可以滑出去 */
+    overflow: hidden;
+  }
+
+  .card {
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* 隱藏捲軸 */
+    scrollbar-width: none;
+  }
+
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-item {
+    flex: 0 0 260px; /* 固定寬度，不縮放 */
+    max-width: 260px;
+    scroll-snap-align: start;
+  }
+
+}
+
+
+/* section projects */
+
+.projects{
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  padding: 80px;
+}
+
+.projects .container{
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projects .title{
+  width: 100%;
+
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.projects-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* 現在才會生效 */
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 397px;
+  padding: 28px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* 背景圖圖片 */
+.project-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  position: absolute;
+  /* top: 50%;
+  left: 40px;
+  transform: translateY(-50%); 垂直置中 */
+  width: 386px;
+  background: #FDF7F1;
+  padding: 40px 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 1; /* 確保在圖片上面 */
+
+  gap: 12px;
+  text-align: center;
+}
+
+.project-card-date{
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+
+.project-card-tags{
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+
+.project-card-title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 2%;
+
+}
+
+.project-card-desc{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+
+.project-card-btn{
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2c2c2c;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* projects-mobile */
+
+@media (max-width: 768px) {
+
+  .projects {
+    padding: 40px 24px;
+  }
+
+  .project-card {
+    height: 580px;        /* 固定高度 */
+    align-items: flex-end; /* content 推到底部 */
+    padding: 0;
+  }
+
+.project-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 這行確保圖片填滿整個card高度 */
+  display: block;
+}
+
+.project-content {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%); 
+  max-width: 319px;
+  width: 100%;
+  background: #FDF7F1;
+  padding: 40px 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 1; /* 確保在圖片上面 */
+
+  gap: 12px;
+  text-align: center;
+}
+
+}
+
+/* section blogs */
+.blogs{
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  padding: 80px;
+}
+
+.blogs .container{
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.blogs .top{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogs .title{
+  display: flex; 
+  flex-direction: column;
+}
+
+.blogs-btn{
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #2c2c2c;
+  color: #2c2c2c;
+  border-radius: 999px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.blogs-list{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 24px;
+}
+
+.blog-card {
+  flex: 1;
+  min-width: 0; 
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumb {
+  width: 100%;
+  height: auto;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  justify-content: center;
+}
+
+.tags ul{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    font-size: 16px;
+    color: #404040;
+    padding: 0px;   
+    margin: 0;  
+}
+
+.blog-card-title{
+  font-size: 24px;
+  color: #404040;
+  line-height: 150%;
+  font-weight: bold;
+}
+
+.date{
+  font-size: 14px;
+  color: #404040;
+  font-weight: medium;
+}
+
+/* blogs-mobile */
+
+@media (max-width: 768px) {
+
+  .blogs {
+    padding: 40px 0 40px 20px; /* 右邊不留 padding，讓卡片可以滑出去 */
+    overflow: hidden;
+  }
+
+  .blogs-list {
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* 隱藏捲軸 */
+    scrollbar-width: none;
+  }
+
+  .card::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-card {
+    flex: 0 0 260px; /* 固定寬度，不縮放 */
+    max-width: 260px;
+    scroll-snap-align: start;
+  }
+
+}
+
+/* section subscription */
+.subscription{
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  padding: 80px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription_bg.png?raw=true');
+  background-size: cover;
+  background-position: center;
+}
+
+.subscription .container{
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.subs-img{
+  max-width: 526px;
+  width: 100%;
+  height: auto;
+}
+
+.subs-right{
+  flex: 1;
+  max-width: 746px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 80px 40px;
+  gap: 24px;
+}
+
+.subs-right .top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.subs-right .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 64px;
+  padding: 8px;
+  gap: 4px;
+
+  border: 1px solid #fff;
+  border-radius: 999px;
+}
+
+/* 輸入框文字區 */
+.subs-right .text {
+  flex: 1;
+  font-size: 16px;
+
+  padding: 12px 24px;
+}
+
+/* 送出按鈕 */
+.subs-btn {
+  width: 81px;
+  height: 48px;
+  padding: 12px 24px;
+
+  color: #404040;
+  background-color: #fff;
+  border-radius: 999px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* subscription-mobile */
+
+@media (max-width: 767px) {
+  .subscription {
+    padding: 40px 16px;
+  }
+
+  .subscription .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .subs-img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .subs-right {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .subs-right .bottom {
+    height: auto;
+    padding: 8px;
+  }
+
+  .subs-right .text {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .subs-btn {
+    width: auto;
+    height: 44px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* contact section */
+.contact {
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  padding: 80px;
+  background-color: #2c1a0e;
+}
+
+.contact .container {
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 80px;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  
+  gap: 24px;
+}
+
+.contact-connect{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-right {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  gap: 24px;
+}
+
+.contact-right-top {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-input {
+  flex: 1;
+  width: 100%;
+  height: 64px;
+  padding: 0 24px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-textarea {
+  flex: 1;
+  width: 100%;
+  height: 136px;
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-submit {
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  color: #2c1a0e;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* contact-mobile */
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 40px 16px;
+  }
+
+  .contact .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-left {
+    gap: 24px;
+  }
+
+  .contact-right {
+    width: 100%;
+    padding: 0;
+    gap: 16px;
+  }
+
+  .contact-right-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-input {
+    height: 56px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .contact-textarea {
+    height: 140px;
+    padding: 16px 20px;
+    border-radius: 28px;
+    font-size: 14px;
+  }
+
+  .contact-submit {
+    height: 52px;
+    font-size: 14px;
+  }
+}
