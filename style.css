@@ -10,6 +10,11 @@
   --gray: #808080;
 }
 
+::selection {
+  background-color: #acffa7;
+  color: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +63,7 @@ a {
 
 .contact {
   display: flex;
-  gap: 60px;
+  gap: 80px;
 }
 
 .contact-item {
@@ -67,12 +72,12 @@ a {
 
 .contact-label {
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-.contact-item a {
+/* .contact-item a {
   font-size: 10px;
-}
+} */
 
 .contact-item a:hover {
   color: var(--pink);
@@ -123,6 +128,8 @@ a {
 .info-text {
   font-size: 12px;
   line-height: 1.6;
+  background-color: #acffa7;
+  display: inline;
   margin-bottom: 12px;
 }
 
@@ -132,6 +139,8 @@ a {
 
 .info-label {
   font-size: 16px;
+  background-color: #acffa7;
+  display: inline;
   margin-bottom: 4px;
 }
 
@@ -198,7 +207,7 @@ a {
 
 /* 中間那一欄故意往下移，做出交錯的效果 */
 .work-item--offset {
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 /* ---------- 作品封面照（統一只有一張，不分海報/對開） ---------- */
@@ -235,7 +244,7 @@ a {
 }
 
 .work-name {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   color: var(--pink);
   margin-bottom: 4px;
@@ -243,7 +252,7 @@ a {
 }
 
 .work-desc {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--pink);
   line-height: 1.5;
   transition: color 0.3s ease;
