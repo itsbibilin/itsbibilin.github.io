@@ -1,344 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yichen Lin - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=format_color_fill" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/0163848842b749c38a767e05caabbbd18d2f6dc9/2026-web-camp/device-pc.svg" alt="logo">
-            </div>
 
-            <div class="nav">
-                <a href="#" class="nav-item">服務項目</a>
-                <a href="#" class="nav-item">專案作品</a>
-                <a href="#" class="nav-item">部落格</a>
-                <a href="#" class="nav-item">與我聯絡</a>
-            </div>
-            
-            <button class="menu-btn" type="button">☰</button>
-        </div>
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <a href="index.html" class="logo">Yichen Lin</a>
+
+    <div class="contact">
+      <div class="contact-item">
+        <p class="contact-label">INSTAGRAM</p>
+        <a href="https://instagram.com/xxxxx" target="_blank">@xxxxx ↗</a>
+      </div>
+      <div class="contact-item">
+        <p class="contact-label">EMAIL</p>
+        <a href="mailto:xxxx@gmail.com">xxxx@gmail.com ↗</a>
+      </div>
     </div>
+  </header>
 
-    <section class="hero">
-        <img class="deco deco-1" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_1.png?raw=true" alt="index_decora_1.png">
-        <img class="deco deco-2" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_2.png?raw=true" alt="index_decora_2.png">
-        <img class="deco deco-3" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true" alt="index_decora_3.png">
-        <img class="deco deco-4" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_4.png?raw=true" alt="index_decora_4.png">
-        <img class="deco deco-5" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_5.png?raw=true" alt="index_decora_5.png">
-        <img class="deco deco-6" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true" alt="index_decora_6.png">
-        <img class="deco deco-7" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_decora_3.png?raw=true" alt="index_decora_7.png">
+  <!-- ========== 主要內容：左右兩區塊 ========== -->
+  <main class="main">
 
-        <div class="container">
-            <div class="left">
-                <div class="top">
-                    <h1 class="hero-title">Hello<br>I'm Nelson</h1>
-                    <div class="body">
-                        <p class="hero-desc">我是一名擁有 10 年經驗的 UI/UX 設計師，能夠融合上商業思維與美學設計式化設計，打造一個又一個應用程式的數位設計！</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <button class="btn-primary">與我聯絡</button>
-                    <button class="btn-secondary">我的履歷</button>
-                </div>
+    <!-- ---------- 左側：個人資訊（這一欄不會滾動） ---------- -->
+    <aside class="sidebar">
+      <img src="/images/ycl.jpg" alt="Yichen Lin" class="photo">
+
+      <h2 class="job-title">UI / UX &amp; Web Designer</h2>
+
+      <p class="info-text">Based in Taiwan</p>
+
+      <p class="info-text">
+        Hongik University<br>
+        Graduate School, Korea
+      </p>
+
+      <div class="info-block">
+        <p class="info-label">Portfolio</p>
+        <a href="https://www.behance.net/xxxxx" target="_blank" class="info-link">Behance ↗</a>
+      </div>
+
+      <a href="https://github.com/xxxxx" target="_blank" class="info-link">GitHub ↗</a>
+    </aside>
+
+    <!-- ---------- 右側：作品集（可以用滾輪上下滑動） ---------- -->
+    <section class="works">
+      <h1 class="works-title">Works</h1>
+
+      <!-- ===== WEB / UI ===== -->
+      <div class="work-category">
+        <h3 class="category-title">WEB / UI</h3>
+
+        <div class="work-row">
+
+          <a href="https://www.behance.net/yichenlin6" class="work-item">
+            <div class="work-image">
+              <img src="images/impf_web.png" alt="impf_web">
             </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
 
-            <div class="right">
-                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/index_person.png?raw=true" alt="person">
+          <a href="https://www.behance.net/yichenlin6" class="work-item work-item--offset">
+            <div class="work-image">
+              <img src="/images/loccitane_landing page.png" alt="loccitane_landing page">
             </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
+
+          <a href="https://www.behance.net/yichenlin6" class="work-item">
+            <div class="work-image">
+              <img src="cover3.jpg" alt="">
+            </div>
+            <p class="work-name">Name Name Name</p>
+            <p class="work-desc">Body Body Body Body Body Body Body Body Body Body</p>
+          </a>
+
         </div>
+      </div>
+
+      <!-- ===== Graphic Design ===== -->
+      <div class="work-category">
+        <h3 class="category-title">Graphic Design</h3>
+
+        <div class="work-row">
+
+          <a href="#" class="work-item">
+            <div class="work-image">
+              <img src="cover4.jpg" alt="">
+            </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
+
+          <a href="#" class="work-item work-item--offset">
+            <div class="work-image">
+              <img src="cover5.jpg" alt="">
+            </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
+
+          <a href="#" class="work-item">
+            <div class="work-image">
+              <img src="cover6.jpg" alt="">
+            </div>
+            <p class="work-name">Name Name Name</p>
+            <p class="work-desc">Body Body Body Body Body Body Body Body Body Body</p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ===== Illustration ===== -->
+      <div class="work-category">
+        <h3 class="category-title">Illustration</h3>
+
+        <div class="work-row">
+
+          <a href="#" class="work-item">
+            <div class="work-image">
+              <img src="cover7.jpg" alt="">
+            </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
+
+          <a href="#" class="work-item work-item--offset">
+            <div class="work-image">
+              <img src="cover8.jpg" alt="">
+            </div>
+            <p class="work-name">IMPERFECT COFFEE</p>
+            <p class="work-desc">Web Design / Development - 2026</p>
+          </a>
+
+          <a href="#" class="work-item">
+            <div class="work-image">
+              <img src="cover9.jpg" alt="">
+            </div>
+            <p class="work-name">Name Name Name</p>
+            <p class="work-desc">Body Body Body Body Body Body Body Body Body Body</p>
+          </a>
+
+        </div>
+      </div>
+
     </section>
 
-    <section class="services">
-        <div class="container">
-            <div class="title">
-                <p class="tctitle">服務項目</p>
-                <h2 class="entitle">SERVICES</h2>
-            </div>
-
-            <div class="card">
-                <div class="card-item">
-                    <div class="top">
-                        <div class="title">
-                            <span class="card-tag">GRAPHIC</span>
-                            <h3 class="card-name">平面設計</h3>
-                        </div>
-                        <span class="material-symbols-outlined">
-                            format_color_fill
-                        </span>
-                    </div>
-                    <div class="bottom">
-                        <p class="card-desc">從品牌識別到視覺傳達，用專業設計精準傳遞核心價值</p>
-                        <img src="" alt="icon">
-                    </div>
-                </div>        
-
-                <div class="card-item">
-                    <div class="top">
-                        <div class="title">
-                            <span class="card-tag">WEBSITE</span>
-                            <h3 class="card-name">網頁設計</h3>
-                        </div>
-                        <span class="material-symbols-outlined">
-                            format_color_fill
-                        </span>
-                    </div>
-                    <div class="bottom">
-                        <p class="card-desc">美感易用並重，以 Figma 打造符合直覺的數位體驗</p>
-                        <img src="" alt="icon">
-                    </div>
-                </div>
-
-                <div class="card-item">
-                    <div class="top">
-                        <div class="title">
-                            <span class="card-tag">FRONTEND</span>
-                            <h3 class="card-name">前端切版</h3>
-                        </div>
-                        <span class="material-symbols-outlined">
-                            format_color_fill
-                        </span>
-                    </div>
-                    <div class="bottom">
-                        <p class="card-desc">精準轉譯設計稿細節，建構流暢穩定 RWD 響應式網頁</p>
-                        <img src="" alt="icon">
-                    </div>
-                </div>
-
-                <div class="card-item">
-                    <div class="top">
-                        <div class="title">
-                            <span class="card-tag">BACKEND</span>
-                            <h3 class="card-name">後端開發</h3>
-                        </div>
-                        <span class="material-symbols-outlined">
-                            format_color_fill
-                        </span>
-                    </div>
-                    <div class="bottom">
-                        <p class="card-desc">佈署穩定系統架構，串接 API 並確保數據處理安全</p>
-                        <img src="" alt="icon">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- section projects -->
-    <section class="projects">
-        <div class="container">
-            <div class="title">
-                <p class="tctitle">專案作品</p>
-                <h2 class="entitle">PROJECTS</h>
-            </div>
-            <div class="projects-list">
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-card-date">Oct 16, 2025</div>
-                        <div class="project-card-tags">
-                            <span>平面設計</span>
-                            <span>網頁設計</span>
-                        </div>
-                        <h3 class="project-card-title">品牌視覺與電商整合，多肉植物品牌電商建置</h3>
-                        <div class="project-card-desc">從品牌識別設計到 RWD 網站開發，打造療癒系植栽購物體驗</div>
-                        
-                        <a href="#" class="project-card-btn">前往專案</a>
-                    </div>
-                    <div class="project-card-image">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_1.png?raw=true" alt="project_1">
-                    </div>
-                </div>                
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-card-date">Oct 16, 2025</div>
-                        <div class="project-card-tags">
-                            <span>平面設計</span>
-                            <span>網頁設計</span>
-                            <span>前端切版</span>
-                        </div>
-                        <h3 class="project-card-title">數位產品 UI/UX 設計，個人化財務視覺化軟體</h3>
-                        <div class="project-card-desc">運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的操作介面</div>
-                        
-                        <a href="#" class="project-card-btn">前往專案</a>
-                    </div>
-                    <div class="project-card-image">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_2.png?raw=true" alt="project_2">
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-card-date">Oct 16, 2025</div>
-                        <div class="project-card-tags">
-                            <span>前端切版</span>
-                            <span>後端開發</span>
-                        </div>
-                        <h3 class="project-card-title">品牌識別與包裝設計，法式甜點品牌視覺重塑</h3>
-                        <div class="project-card-desc">以溫暖、輕盈的視覺語言，精準定位高質感甜點市場的品牌形象</div>
-                        
-                        <a href="#" class="project-card-btn">前往專案</a>
-                    </div>
-                    <div class="project-card-image">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_3.png?raw=true" alt="project_3">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- section blogs -->
-    <section class="blogs">
-        <div class="container">
-            <div class="top">
-                <div class="title">
-                    <p class="tctitle">部落格</p>
-                    <h2 class="entitle">BLOGS</h>
-                </div>
-                <a href="#" class="blogs-btn">探索更多</a>
-            </div>
-            <div class="blogs-list">
-                <div class="blog-card">
-                <div class="thumb">
-                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_2.png?raw=true" alt="blog_2">
-                </div>
-                <div class="info">
-                    <div class="tags">
-                    <ul>
-                        <li>UIUX 設計</li>
-                        <li>·</li>
-                        <li>設計規範</li>
-                        <li>·</li>
-                        <li>前端技術</li>
-                    </ul>
-                    </div>
-                    
-                    <div class="blog-card-title">揭開金融 App 的設計密碼：如何優化 Open Bank API 的複雜數據呈現與後端串接安全性</div>
-                    
-                    <div class="date">Oct 16, 2022</div>
-                </div>
-                </div>
-                <div class="blog-card">
-                    <div class="thumb">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_3.png?raw=true" alt="blog_3">
-                    </div>
-                    <div class="info">
-                        <div class="tags">
-                        <ul>
-                            <li>UIUX 設計</li>
-                            <li>·</li>
-                            <li>設計規範</li>
-                            <li>·</li>
-                            <li>前端技術</li>
-                        </ul>
-                        </div>
-                        
-                        <div class="blog-card-title">從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯</div>
-                        
-                        <div class="date">Oct 16, 2022</div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="thumb">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_5.png?raw=true" alt="blog_5">
-                    </div>
-                    <div class="info">
-                        <div class="tags">
-                        <ul>
-                            <li>UIUX 設計</li>
-                            <li>·</li>
-                            <li>設計規範</li>
-                            <li>·</li>
-                            <li>前端技術</li>
-                        </ul>
-                        </div>
-                        
-                        <div class="blog-card-title">10年職人手記：如何運用 Figma 與 Storybook 打造美感與邏輯兼具的企業級設計系統</div>
-                        
-                        <div class="date">Oct 16, 2022</div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </section>
-
-<!-- section subscription -->
-    <section class="subscription">
-        <div class="container">
-            <div class="subs-img">
-                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription.png?raw=true" alt="subscription">
-            </div>
-            <div class="subs-right">
-                <div class="top">
-                    <div class="subs-title">
-                        <p class="tctitle">電子報訂閱</p>
-                        <h2 class="entitle">SUBSCRIPTION</h>
-                    </div>
-                    <div class="subs-desc">
-                        你也在追求設計美感與技術落地的完美平衡嗎？作為資深設計師兼工程師，我深知跨領域協作的痛點。訂閱電子報，我將分享如何利用 AI 工具提升產能！
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="text">
-                        電子信箱
-                    </div>
-                    <a href="#" class="subs-btn">送出</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- section contact -->
-    <section class="contact">
-        <div class="container">
-            <div class="contact-left">
-                <div class="contact-title">
-                    <p class="tctitle">與我聯絡</p>
-                    <h2 class="entitle">CONTACT</h2>
-                </div>
-
-                <div class="contact-desc">
-                    若有數位產品設計和開發相關問題<br>歡迎填寫表單 或 直接與我聯絡！
-                </div>
-                <div class="contact-connect">
-                    <div class="contact-social">
-                        <a href="#" class="social-btn">IG</a>
-                        <a href="#" class="social-btn">Line</a>
-                        <a href="#" class="social-btn">LinkedIn</a>
-                    </div>
-                    <div class="contact-email">
-                        <span>✉ service@hexschool.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-right">
-                <div class="contact-right-top">
-                    <input type="text" placeholder="姓名" class="contact-input" />
-                    <input type="text" placeholder="手機號碼" class="contact-input" />
-                </div>
-                <div class="contact-right-email">
-                    <input type="email" placeholder="電子信箱" class="contact-input full" />
-                </div>
-                <div class="contact-right-textarea">
-                    <textarea placeholder="備註" class="contact-textarea"></textarea>
-                </div>
-                <div class="contact-btn">
-                    <button class="contact-submit">送出</button>
-                </div>
-            </div>
-        </div>
-    </section> 
+  </main>
 
 </body>
 </html>
