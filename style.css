@@ -193,12 +193,15 @@ a {
   margin-bottom: 24px;
 }
 
-/* 一排三個作品，讓它們用 flex 排在一起 */
+/* 一排三個作品，讓它們用 grid 排在一起 */
 .work-row {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 200px); /* 固定三欄 */
   justify-content: center;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 40px;
+  /* 保留固定的 row 高度，即使某格是空的，高度也不会塌陷 */
+  align-items: start;
 }
 
 .work-item {
@@ -208,6 +211,12 @@ a {
 /* 中間那一欄故意往下移，做出交錯的效果 */
 .work-item--offset {
   margin-top: 120px;
+}
+
+/* 空的佔位格：保留版面空間，但不顯示任何內容 */
+.work-item--empty {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* ---------- 作品封面照（統一只有一張，不分海報/對開） ---------- */
