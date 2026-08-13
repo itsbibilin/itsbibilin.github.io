@@ -306,14 +306,21 @@ a {
     padding-right: 0;
   }
 
+  /* 改用 grid-template-columns: 1fr，變成單欄垂直排列 */
   .work-row {
-    flex-direction: column;
-    gap: 30px;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    column-gap: 0;
   }
 
   .work-item,
   .work-item--offset {
     width: 100%;
-    margin-top: 0;
+    margin-top: 0; /* 手機版不需要交錯效果 */
+  }
+
+  /* 手機版是單欄，不再需要用空格子撐版面，直接隱藏 */
+  .work-item--empty {
+    display: none;
   }
 }
