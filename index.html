@@ -33,7 +33,7 @@
 
     <!-- ---------- 左側：個人資訊（這一欄不會滾動） ---------- -->
     <aside class="sidebar">
-      <img src="/images/ycl.jpg" alt="Yichen Lin" class="photo">
+      <img src="images/ycl.jpg" alt="Yichen Lin" class="photo">
 
       <h2 class="job-title">UI / UX &amp; Web Designer</h2>
 
@@ -72,7 +72,7 @@
 
           <a href="https://www.behance.net/gallery/253784273/LOCCITANE-Osmanthus-Landing-Page-Design" class="work-item work-item--offset" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/loccitane_landing page.png" alt="loccitane_landing page">
+              <img src="images/loccitane_landing page.png" alt="loccitane_landing page">
             </div>
             <p class="work-name">L’OCCITANE Osmanthus</p>
             <p class="work-desc">Landing Page Design - 2024</p>
@@ -80,7 +80,7 @@
 
           <a href="https://www.behance.net/gallery/253159263/Japanese-Vocational-School-Website-Redesign" class="work-item" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/school_web.png" alt="Japanese Vocational School">
+              <img src="images/school_web.png" alt="Japanese Vocational School">
             </div>
             <p class="work-name">Japanese Vocational School</p>
             <p class="work-desc">Website Redesign - 2025</p>
@@ -97,7 +97,7 @@
 
           <a href="https://www.behance.net/gallery/254195055/IMPERFECT-COFFEE-Brand-Identity" class="work-item" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/impf_brand identity.png" alt="IMPERFECT COFFEE Brand Identity">
+              <img src="images/impf_brand identity.png" alt="IMPERFECT COFFEE Brand Identity">
             </div>
             <p class="work-name">IMPERFECT COFFEE</p>
             <p class="work-desc">Brand Identity - 2025</p>
@@ -121,7 +121,7 @@
 
           <a href="https://www.behance.net/gallery/254294453/I-LOVE-SEOUL-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/illu_seoul.png" alt="illu_seoul">
+              <img src="images/illu_seoul.png" alt="illu_seoul">
             </div>
             <p class="work-name">I LOVE SEOUL</p>
             <p class="work-desc">Illustration - 2024</p>
@@ -129,7 +129,7 @@
 
           <a href="https://www.behance.net/gallery/254310769/EVERYDAY-MOMENTS-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/illu_everyday-moments.png" alt="illu_everyday-moments">
+              <img src="images/illu_everyday-moments.png" alt="illu_everyday-moments">
             </div>
             <p class="work-name">日常</p>
             <p class="work-desc">Illustration - 2024</p>
@@ -137,7 +137,7 @@
 
           <a href="https://www.behance.net/gallery/254310883/Oops-Thats-Life-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
             <div class="work-image">
-              <img src="/images/illu_blackhumor.png" alt="illu_blackhumor">
+              <img src="images/illu_blackhumor.png" alt="illu_blackhumor">
             </div>
             <p class="work-name">BLACK HUMOR</p>
             <p class="work-desc">Illustration - 2024</p>
@@ -146,9 +146,53 @@
         </div>
       </div>
 
+      <!-- ===== Poster ===== -->
+      <div class="work-category">
+        <h3 class="category-title">Poster</h3>
+
+        <div class="work-row">
+
+          <div class="work-item poster-item" data-image="images/poster1.jpg" data-title="POSTER 1">
+            <div class="work-image">
+              <img src="images/poster1.jpg" alt="poster1">
+            </div>
+            <p class="work-name">POSTER 1</p>
+            <p class="work-desc">個人練習 - 2026</p>
+          </div>
+
+          <div class="work-item poster-item work-item--offset" data-image="images/poster2.png" data-title="POSTER 2">
+            <div class="work-image">
+              <img src="images/poster2.png" alt="poster2">
+            </div>
+            <p class="work-name">POSTER 2</p>
+            <p class="work-desc">課堂專案 - 2024</p>
+          </div>
+
+          <!-- <div class="work-item poster-item" data-image="images/poster1.jpg" data-title="POSTER 3">
+            <div class="work-image">
+              <img src="images/poster1.jpg" alt="poster3">
+            </div>
+            <p class="work-name">POSTER 3</p>
+            <p class="work-desc">Poster Design - 2025</p>
+          </div> -->
+
+        </div>
+      </div>
+
     </section>
 
   </main>
+
+  <!-- ========== Modal ========== -->
+  <div class="modal" id="posterModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <img class="modal-image" src="" alt="Poster">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
