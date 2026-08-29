@@ -1,38 +1,33 @@
-/* ==========================================================
-   共用設定
-   ========================================================== */
+/* ========================================
+   基本設定
+======================================== */
 
-/* 把顏色設定成變數，之後要改色只要改這裡就好 */
 :root {
-  --pink: #FF65AD;
-  --blue: #B4E1FF;
-  --black: #1a1a1a;
-  --gray: #808080;
-}
-
-::selection {
-  background-color: #acffa7;
-  color: #000000;
+  --blue: #2BAAFF;
+  --black: #313131;
+  --gray: #cfcfcf;
+  --light-blue: #9cd8ff;
+  --background: #f5f5f5;
+  --selection: #acffa7;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* 讓 padding 不會撐大元素寬度 */
+  box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden; /* 整個頁面不能滾動，只有 works 區塊自己會滾動 */
+::selection {
+  background-color: var(--selection);
+  color: var(--black);
 }
 
 body {
-  font-family: "Inter", "Noto Sans TC", sans-serif;
-  background-color: var(--blue);
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
   color: var(--black);
-  display: flex;
-  flex-direction: column; /* header 在上面，main 撐滿剩下的高度 */
-  height: 100%;
+  height: 100vh;
+  overflow: hidden; /* 讓整個頁面不捲動，改由右側作品區自己捲動 */
 }
 
 a {
@@ -40,30 +35,39 @@ a {
   color: inherit;
 }
 
-
-/* ==========================================================
-   Header
-   ========================================================== */
-
-.header {
+/* ========================================
+   整體外層容器：寬度1440px，左右 padding 20px
+======================================== */
+.page {
+  width: 1440px;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   Header：寬1400px、高80px
+======================================== */
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 20px;
-  flex-shrink: 0; /* header 高度固定，不會被壓縮 */
 }
 
 .logo {
-  font-family: "Geist Mono", sans-serif;
+  font-family: 'Geist Mono', monospace;
   font-size: 32px;
   font-weight: 500;
-  color: var(--pink);
-  letter-spacing: 1px;
+  color: var(--blue);
 }
 
-.contact {
+.header-contact {
   display: flex;
-  gap: 80px;
+  gap: 60px;
 }
 
 .contact-item {
@@ -71,366 +75,270 @@ a {
 }
 
 .contact-label {
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 600;
+  color: var(--black);
 }
 
-/* .contact-item a {
-  font-size: 10px;
-} */
-
-.contact-item a:hover {
-  color: var(--pink);
-}
-
-
-/* ==========================================================
-   主要內容區（左右兩欄）
-   ========================================================== */
-
-.main {
-  display: flex;
-  padding: 0 20px 40px 20px;
-  gap: 40px;
-  flex: 1; /* 撐滿 header 以外剩下的高度 */
-  min-height: 0; /* 讓裡面的 works 區塊可以正確滾動，這行不能省略 */
-}
-
-
-/* ---------- 左側：個人資訊 sidebar ---------- */
-
-.sidebar {
-  width: 400px;
-  flex-shrink: 0; /* 視窗變小時，這一欄不要被壓縮 */
-}
-
-.photo {
-  width: 240px;
-  object-fit: cover; /* 照片比例不對時，用裁切的方式填滿 */
-  background-color: var(--gray); /* 圖片還沒放進來前的預留底色 */
+.contact-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  color: var(--black);
   display: block;
+  margin-top: 2px;
+}
+
+/* ========================================
+   Main Container：寬1400px，左400 / 右1000
+======================================== */
+.container {
+  width: 1400px;
+  flex: 1;
+  display: flex;
+  gap: 100px;
+  overflow: hidden; /* 內部各自控制捲動 */
+  padding-top: 40px;
+}
+
+/* ---------- 左側：個人簡介（固定不動） ---------- */
+.profile {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 240px;
+  height: auto;
   margin-bottom: 24px;
 }
 
-.photo img {
+.profile-photo img {
   width: 100%;
-  height: auto; /* 高度依照片比例自動調整，不裁切 */
+  height: auto;
   display: block;
 }
 
-.job-title {
-  font-family: "Times New Roman", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-.info-text {
-  font-size: 12px;
-  line-height: 1.6;
-  background-color: #acffa7;
-  display: inline;
+.profile-title {
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
-.info-block {
-  margin-top: 20px;
+.profile-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--black);
+  line-height: 1.8;
 }
 
-.info-label {
-  font-size: 16px;
-  background-color: #acffa7;
-  display: inline;
-  margin-bottom: 4px;
+.profile-bold {
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 
-.info-link {
-  font-size: 12px;
-  display: inline-block;
-  margin-bottom: 4px;
+.profile-links {
+  margin-top: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--black);
 }
 
-.info-link:hover {
-  color: var(--pink);
+.profile-links a:hover{
+  text-decoration: underline 1.5px;
+  text-underline-offset: 3px;
 }
 
-
-/* ---------- 右側：作品集 works ---------- */
-
-.works {
-  flex: 1; /* 把剩下的空間都吃掉 */
-  height: 100%;
-  overflow-y: auto; /* 只有這個區塊可以用滾輪上下滑動 */
-  padding-right: 20px; /* 留一點空間給捲軸，避免內容被擋住 */
-}
-
-/* 讓捲軸看起來細一點，跟整體風格搭 */
-.works::-webkit-scrollbar {
-  width: 6px;
-}
-
-.works::-webkit-scrollbar-thumb {
-  background-color: var(--pink);
-  /* border-radius: 3px; */
-}
-
-.works-title {
-  font-family: "Times New Roman", sans-serif;
-  font-style: italic;
-  font-size: 20px;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
-  border-top: 2px solid var(--pink);
-}
-
-.work-category {
-  margin-bottom: 30px;
-}
-
-.category-title {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-/* 一排三個作品，讓它們用 grid 排在一起 */
-.work-row {
-  display: grid;
-  grid-template-columns: repeat(3, 200px); /* 固定三欄 */
-  justify-content: center;
-  column-gap: 40px;
-  row-gap: 40px;
-  /* 保留固定的 row 高度，即使某格是空的，高度也不会塌陷 */
-  align-items: start;
-}
-
-.work-item {
-  width: 200px; /* 跟封面照寬度一致 */
-}
-
-/* 每一排的中間格子都往下移，自動交錯的效果 */
-.work-row .work-item:nth-child(3n + 2) {
-  margin-top: 100px;
-}
-
-/* 空的佔位格：保留版面空間，但不顯示任何內容 */
-.work-item--empty {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-/* ---------- 作品封面照（統一只有一張，不分海報/對開） ---------- */
-
-.work-image {
-  width: 200px;
-  margin-bottom: 16px;
+/* ---------- 右側：作品內容 ---------- */
+.content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  position: relative; /* 讓下面的粉紅色遮罩可以疊在照片上 */
 }
 
-.work-image img {
+/* 上方：分類 Link  */
+.filter-bar {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  color: var(--gray);
+  flex-shrink: 0;
+  border-top: 1px solid var(--blue);
+  margin-bottom: 20px;
+}
+
+.filter-separator {
+  color: var(--black);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.filter {
+  color: var(--gray);
+}
+
+.filter:hover,
+.filter:focus-visible {
+  text-decoration: underline 1.5px;
+  text-underline-offset: 3px;
+}
+
+.filter.active {
+  color: var(--black);
+  font-weight: 600;
+}
+
+/* 下方：作品展示區（超出高度可捲動） */
+.works-scroll {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 30px;
+}
+
+.works-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.works-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 25px;
+  padding-bottom: 40px;
+}
+
+/* 每張 Card：250 x 310 */
+.card {
+  width: 250px;
+  color: inherit;
+}
+
+/* 中間欄位的 Card 上下錯開 */
+.card-offset {
+  margin-top: 80px;
+}
+
+.card-image {
+  width: 250px;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.card-image img {
   width: 100%;
-  height: auto; /* 高度依照片比例自動調整，不裁切 */
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-/* 用一層粉紅色遮罩疊在照片上，做出「預設是粉紅色調」的效果 */
-.work-image::after {
+/* 用藍色遮罩疊在照片上，保留照片的明暗細節 */
+.card-image::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--pink);
-  mix-blend-mode: color; /* 讓底下的照片變成粉紅色調，但保留明暗細節 */
+  background-color: var(--light-blue);
+  mix-blend-mode: color;
   transition: opacity 0.3s ease;
 }
 
-/* 滑鼠移到作品連結上時，粉紅色遮罩淡出，照片變回原本的顏色 */
-.work-item:hover .work-image::after {
+/* 滑鼠移到作品連結上時，遮罩淡出，照片恢復原色 */
+.card:hover .card-image::after,
+.card:focus-visible .card-image::after {
   opacity: 0;
 }
 
-.work-name {
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--pink);
-  margin-bottom: 4px;
-  transition: color 0.3s ease;
-}
-
-.work-desc {
+.card-number {
+  font-family: 'Geist Mono', monospace;
   font-size: 10px;
-  color: var(--pink);
-  line-height: 1.5;
-  transition: color 0.3s ease;
-}
-
-/* 滑鼠移到作品連結上時，標題跟簡述變成黑色 */
-.work-item:hover .work-name,
-.work-item:hover .work-desc {
+  font-weight: 400;
   color: var(--black);
 }
 
-/* 讓 poster 項目可點擊 */
-.poster-item {
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.card-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.poster-item:hover {
-  transform: scale(1.02);
+.card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--blue);
+  margin-top: 4px;
 }
 
-
-/* ==========================================================
-   Modal 樣式
-   ========================================================== */
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+.card:hover .card-desc,
+.card:focus-visible .card-desc {
+  color: var(--black);
 }
 
-/* modal 啟用時顯示 */
-.modal.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 半透明背景遮罩 */
-.modal-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  animation: fadeIn 0.3s ease;
-}
-
-/* modal 內容容器 */
-.modal-content {
-  position: relative;
-  z-index: 1001;
-  max-width: 35vw;
-  max-height: 35vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: zoomIn 0.3s ease;
-}
-
-/* modal 中的圖片 */
-.modal-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-/* 關閉按鈕 */
-.modal-close {
-  position: absolute;
-  top: -250px;
-  right: -50px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  font-size: 28px;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1002;
-  transition: all 0.3s ease;
-}
-
-.modal-close:hover {
-  background-color: var(--pink);
-  transform: rotate(90deg);
-}
-
-/* 淡入動畫 */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* 縮放進入動畫 */
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
-/* ==========================================================
-   響應式：螢幕變小時改成上下排列
-   ========================================================== */
-
+/* ========================================
+   RWD：小螢幕時作品改為垂直排列
+======================================== */
 @media (max-width: 900px) {
-  html, body {
+  body {
     height: auto;
-    overflow: auto; /* 手機版改回整頁一起滾動 */
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .page {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 0 20px;
   }
 
   .header {
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-  }
-
-  .main {
-    flex-direction: column;
-    padding: 0 30px 60px 30px;
     height: auto;
+    min-height: 80px;
   }
 
-  .sidebar {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    overflow: visible;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .profile,
+  .content {
     width: 100%;
   }
 
-  .works {
-    overflow-y: visible;
-    height: auto;
-    padding-right: 0;
+  .content {
+    overflow: visible;
   }
 
-  /* 改用 grid-template-columns: 1fr，變成單欄垂直排列 */
-  .work-row {
-    grid-template-columns: 1fr;
-    row-gap: 30px;
-    column-gap: 0;
+  .works-scroll {
+    overflow: visible;
   }
 
-  .work-item,
-  .work-row .work-item:nth-child(3n + 2) {
-    width: 100%;
-    margin-top: 0; /* 手機版不需要交錯效果 */
+  .works-grid {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  /* 手機版是單欄，不再需要用空格子撐版面，直接隱藏 */
-  .work-item--empty {
-    display: none;
+  .card-offset {
+    margin-top: 0;
   }
 }

@@ -1,198 +1,140 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yichen Lin - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yichen Lin — Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/geist-mono" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== Header ========== -->
-  <header class="header">
-    <a href="index.html" class="logo">Yichen Lin</a>
+  <!-- 網頁寬度設定1440px，左右padding 20px -->
+  <div class="page">
 
-    <div class="contact">
-      <div class="contact-item">
-        <p class="contact-label">INSTAGRAM<br>@staryyybook</p>
-        <!-- <a href="https://instagram.com/staryyybook" target="_blank">@staryyybook ↗</a> -->
-      </div>
-      <div class="contact-item">
-        <p class="contact-label">EMAIL<br>bi8446@gmail.com</p>
-        <!-- <a href="mailto:bi8446@gmail.com">bi8446@gmail.com ↗</a> -->
-      </div>
-    </div>
-  </header>
+    <!-- ========== Header ========== -->
+    <header class="header">
+      <h1 class="logo">Yichen Lin</h1>
 
-  <!-- ========== 主要內容：左右兩區塊 ========== -->
-  <main class="main">
-
-    <!-- ---------- 左側：個人資訊（這一欄不會滾動） ---------- -->
-    <aside class="sidebar">
-      <img src="images/ycl.jpg" alt="Yichen Lin" class="photo">
-
-      <h2 class="job-title">UI / UX &amp; Web Designer</h2>
-
-      <p class="info-text">Based in Taiwan</p><br>
-
-      <p class="info-text">
-        Hongik University<br>
-        Graduate School, Korea
-      </p>
-
-      <div class="info-block">
-        <p class="info-label">Portfolio</p><br>
-        <a href="https://www.behance.net/itsbibilin" target="_blank" class="info-link">Behance ↗</a>
-      </div>
-
-      <a href="https://github.com/itsbibilin" target="_blank" class="info-link">GitHub ↗</a>
-    </aside>
-
-    <!-- ---------- 右側：作品集（可以用滾輪上下滑動） ---------- -->
-    <section class="works">
-      <h1 class="works-title">Works</h1>
-
-      <!-- ===== WEB / UI ===== -->
-      <div class="work-category">
-        <h3 class="category-title">WEB / UI</h3>
-
-        <div class="work-row">
-
-          <a href="https://www.behance.net/gallery/253843097/Imperfect-Coffee-Web-Design" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/impf_web.png" alt="impf_web">
-            </div>
-            <p class="work-name">IMPERFECT COFFEE</p>
-            <p class="work-desc">Web Design / Development - 2026</p>
-          </a>
-
-          <a href="https://www.behance.net/gallery/253784273/LOCCITANE-Osmanthus-Landing-Page-Design" class="work-item work-item--offset" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/loccitane_landing page.png" alt="loccitane_landing page">
-            </div>
-            <p class="work-name">L’OCCITANE Osmanthus</p>
-            <p class="work-desc">Landing Page Design - 2024</p>
-          </a>
-
-          <a href="https://www.behance.net/gallery/253159263/Japanese-Vocational-School-Website-Redesign" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/school_web.png" alt="Japanese Vocational School">
-            </div>
-            <p class="work-name">Japanese Vocational School</p>
-            <p class="work-desc">Website Redesign - 2025</p>
-          </a>
-
+      <div class="header-contact">
+        <div class="contact-item">
+          <p class="contact-label">INSTAGRAM</p>
+          <p class="contact-value">@staryyybook</p>
+        </div>
+        <div class="contact-item">
+          <p class="contact-label">EMAIL</p>
+          <p class="contact-value">bi8446@gmail.com</p>
         </div>
       </div>
+    </header>
 
-      <!-- ===== Graphic Design ===== -->
-      <div class="work-category">
-        <h3 class="category-title">Graphic Design</h3>
+    <!-- ========== Main Container ========== -->
+    <div class="container">
 
-        <div class="work-row">
-
-          <a href="https://www.behance.net/gallery/254195055/IMPERFECT-COFFEE-Brand-Identity" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/impf_brand identity.png" alt="IMPERFECT COFFEE Brand Identity">
-            </div>
-            <p class="work-name">IMPERFECT COFFEE</p>
-            <p class="work-desc">Brand Identity - 2025</p>
-          </a>
-          
-          
-
-          <!-- 原本第2、3个作品被删除，改用空占位格保留位置 -->
-          <div class="work-item work-item--empty"></div>
-          <div class="work-item work-item--empty"></div>
-
+      <!-- ---------- 左側：個人簡介（固定不動） ---------- -->
+      <aside class="profile">
+        <div class="profile-photo">
+          <img src="images/ycl.jpg" alt="Yichen Lin" />
         </div>
-      </div>
 
-      <!-- ===== Illustration ===== -->
+        <h2 class="profile-title">UI / UX &amp; Web Designer</h2>
 
-      <div class="work-category">
-        <h3 class="category-title">Illustration</h3>
-
-        <div class="work-row">
-
-          <a href="https://www.behance.net/gallery/254294453/I-LOVE-SEOUL-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/illu_seoul.png" alt="illu_seoul">
-            </div>
-            <p class="work-name">I LOVE SEOUL</p>
-            <p class="work-desc">Illustration - 2024</p>
-          </a>
-
-          <a href="https://www.behance.net/gallery/254310769/EVERYDAY-MOMENTS-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/illu_everyday-moments.png" alt="illu_everyday-moments">
-            </div>
-            <p class="work-name">日常</p>
-            <p class="work-desc">Illustration - 2024</p>
-          </a>
-
-          <a href="https://www.behance.net/gallery/254310883/Oops-Thats-Life-illustration" class="work-item" target="_blank" rel="noopener noreferrer">
-            <div class="work-image">
-              <img src="images/illu_blackhumor.png" alt="illu_blackhumor">
-            </div>
-            <p class="work-name">BLACK HUMOR</p>
-            <p class="work-desc">Illustration - 2024</p>
-          </a>
-
+        <div class="profile-text">
+          <p class="profile-bold">Visual Communication × UI / Web</p>
+          <p>Figma · Responsive Design · HTML/CSS</p>
         </div>
-      </div>
 
-      <!-- ===== Poster ===== -->
-      <div class="work-category">
-        <h3 class="category-title">Poster</h3>
+        <div class="profile-links">
+          <a href="https://www.behance.net/itsbibilin" target="_blank" rel="noopener noreferrer">Behance ↗</a>
+          <a href="https://github.com/itsbibilin" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </aside>
 
-        <div class="work-row">
+      <!-- ---------- 右側：作品內容 ---------- -->
+      <div class="content">
 
-          <div class="work-item poster-item" data-image="images/poster1.jpg" data-title="POSTER 1">
-            <div class="work-image">
-              <img src="images/poster1.jpg" alt="poster1">
-            </div>
-            <p class="work-name">POSTER 1</p>
-            <p class="work-desc">個人練習 - 2026</p>
+        <!-- 上方：分類 Link 列 -->
+        <nav class="filter-bar">
+          <a href="#" class="filter active" data-filter="web">WEB/UI</a><p class="filter-separator">,</p>
+          <a href="#" class="filter" data-filter="graphic">GRAPHIC</a><p class="filter-separator">,</p>
+          <a href="#" class="filter" data-filter="illustration">ILLUSTRATION</a><p class="filter-separator">,</p>
+          <a href="#" class="filter" data-filter="poster">POSTER</a>
+        </nav>
+
+        <!-- 下方：作品展示區（可滾動） -->
+        <div class="works-scroll">
+          <div class="works-grid">
+
+            <!-- WEB/UI SECTION -->
+
+            <!-- Card 1 -->
+            <a class="card" data-category="web" href="https://www.behance.net/gallery/253843097/Imperfect-Coffee-Web-Design" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/impf_web.png" alt="Imperfect Coffee-website" />
+              </div>
+              <p class="card-number">01.<span class="card-name"> IMPERFECT COFFEE</span></p>
+              <p class="card-desc">Web Design / Development - 2026</p>
+            </a>
+
+            <!-- Card 2 -->
+            <a class="card card-offset" data-category="web" href="https://www.behance.net/gallery/253784273/LOCCITANE-Osmanthus-Landing-Page-Design" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/loccitane_landing page.png" alt="LOCCITANE-Osmanthus-Landing-Page-Design" />
+              </div>
+              <p class="card-number">02.<span class="card-name"> LOCCITANE</span></p>
+              <p class="card-desc">Landing Page Design - 2024</p>
+            </a>
+
+            <!-- Card 3 -->
+            <a class="card" data-category="web" href="https://www.behance.net/gallery/253159263/Japanese-Vocational-School-Website-Redesign" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/school_web.png" alt="Japanese Vocational School Website Redesign" />
+              </div>
+              <p class="card-number">03.<span class="card-name">JAPANESE VOCATIONAL SCHOOL</span></p>
+              <p class="card-desc">Web Design / Development - 2025</p>
+            </a>
+
+            <!-- GRAPHIC SECTION -->
+            <a class="card" data-category="graphic" href="https://www.behance.net/gallery/254195055/IMPERFECT-COFFEE-Brand-Identity" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/impf_brand identity.png" alt="Imperfect Coffee Brand Identity" />
+              </div>
+              <p class="card-number">01.<span class="card-name">IMPERFECT COFFEE</span></p>
+              <p class="card-desc">Brand Identity - 2025</p>
+            </a>
+
+            <!-- ILLUSTRATION SECTION -->
+
+            <!-- Card 1 -->
+            <a class="card card-offset" data-category="illustration" href="https://www.behance.net/gallery/254294453/I-LOVE-SEOUL-illustration" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/illu_seoul.png" alt="I LOVE SEOUL Illustration" />
+              </div>
+              <p class="card-number">01.<span class="card-name">I LOVE SEOUL</span></p>
+              <p class="card-desc">Illustration - 2024</p>
+            </a>
+
+            <!-- Card 2 -->
+            <a class="card" data-category="illustration" href="https://www.behance.net/gallery/254310769/EVERYDAY-MOMENTS-illustration" target="_blank" rel="noopener noreferrer">
+              <div class="card-image">
+                <img src="images/illu_everyday-moments.png" alt="EVERYDAY MOMENTS Illustration" />
+              </div>
+              <p class="card-number">02.<span class="card-name">EVERYDAY MOMENTS</span></p>
+              <p class="card-desc">Illustration - 2024</p>
+            </a>
+
           </div>
-
-          <div class="work-item poster-item work-item--offset" data-image="images/poster2.png" data-title="POSTER 2">
-            <div class="work-image">
-              <img src="images/poster2.png" alt="poster2">
-            </div>
-            <p class="work-name">POSTER 2</p>
-            <p class="work-desc">課堂專案 - 2024</p>
-          </div>
-
-          <!-- <div class="work-item poster-item" data-image="images/poster1.jpg" data-title="POSTER 3">
-            <div class="work-image">
-              <img src="images/poster1.jpg" alt="poster3">
-            </div>
-            <p class="work-name">POSTER 3</p>
-            <p class="work-desc">Poster Design - 2025</p>
-          </div> -->
-
         </div>
+
       </div>
-
-    </section>
-
-  </main>
-
-  <!-- ========== Modal ========== -->
-  <div class="modal" id="posterModal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <img class="modal-image" src="" alt="Poster">
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/filter.js"></script>
 
 </body>
 </html>
