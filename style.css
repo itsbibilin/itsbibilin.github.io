@@ -3,9 +3,9 @@
 ======================================== */
 
 :root {
-  --blue: #2BAAFF;
+  --blue: #00BDFF;
   --black: #313131;
-  --gray: #cfcfcf;
+  --gray: #c9c9c9;
   --light-blue: #9cd8ff;
   --background: #f5f5f5;
   --selection: #acffa7;
@@ -127,9 +127,10 @@ a {
 }
 
 .profile-text {
+  width: 240px;
   font-family: 'Inter', sans-serif;
   font-size: 10px;
-  color: var(--black);
+  color: var(--gray);
   line-height: 1.8;
 }
 
