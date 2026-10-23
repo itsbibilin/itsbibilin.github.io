@@ -1,14 +1,15 @@
-/* ========================================
-   基本設定
-======================================== */
-
+/* ===== 顏色變數 ===== */
 :root {
-  --blue: #00BDFF;
-  --black: #313131;
-  --gray: #c9c9c9;
-  --light-blue: #9cd8ff;
-  --background: #f5f5f5;
-  --selection: #acffa7;
+  --green: #ACFFA7;
+  --dark: #313131;
+  --light: #F5F5F5;
+  --gray: #757575;
+}
+
+/* ===== 基本設定 ===== */
+::selection {
+  background-color: var(--green);
+  color: var(--dark);
 }
 
 * {
@@ -17,283 +18,298 @@
   box-sizing: border-box;
 }
 
-::selection {
-  background-color: var(--selection);
-  color: var(--black);
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background);
-  color: var(--black);
-  height: 100vh;
-  overflow: hidden; /* 讓整個頁面不捲動，改由右側作品區自己捲動 */
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: "Inter", "Noto Sans TC", sans-serif;
+  height: 100vh;      /* 螢幕長度固定 */
+  overflow: hidden;   /* 整個頁面不捲動，只有右邊作品會捲 */
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* ========================================
-   整體外層容器：寬度1440px，左右 padding 20px
-======================================== */
+/* ===== 整體框架 ===== */
 .page {
-  width: 1440px;
-  max-width: 100%;
   height: 100vh;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 60px 40px 40px;
   display: flex;
   flex-direction: column;
 }
 
-/* ========================================
-   Header：寬1400px、高80px
-======================================== */
+/* ===== 上排 ===== */
 .header {
-  height: 80px;
+  flex-shrink: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
+  height: 70px;
 }
 
 .logo {
-  font-family: 'Geist Mono', monospace;
-  font-size: 32px;
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 20px;
   font-weight: 500;
-  color: var(--blue);
 }
 
-.header-contact {
+/* .contact {
   display: flex;
   gap: 60px;
+  padding-top: 8px;
 }
 
 .contact-item {
-  text-align: left;
-}
-
-.contact-label {
-  font-family: 'Inter', sans-serif;
+  text-align: center;
   font-size: 10px;
-  font-weight: 600;
-  color: var(--black);
+} */
+
+/* .contact-label {
+  display: block;
+  font-weight: 500;
 }
 
-.contact-value {
-  font-family: 'Inter', sans-serif;
+.contact-text {
+  display: block;
   font-size: 9px;
-  color: var(--black);
-  display: block;
-  margin-top: 2px;
-}
+  color: #666;
+} */
 
-/* ========================================
-   Main Container：寬1400px，左400 / 右1000
-======================================== */
-.container {
-  width: 1400px;
+/* ===== 中間：左右兩欄 ===== */
+.main {
   flex: 1;
+  min-height: 0;   /* 很重要！讓右邊可以出現卷軸 */
   display: flex;
-  gap: 100px;
-  overflow: hidden; /* 內部各自控制捲動 */
-  padding-top: 40px;
+  align-items: stretch;
+  gap: 120px;
 }
 
-/* ---------- 左側：個人簡介（固定不動） ---------- */
-.profile {
-  width: 360px;
+/* ===== 左側 ===== */
+.sidebar {
+  width: 340px;
   flex-shrink: 0;
-}
-
-.profile-photo {
-  width: 240px;
-  height: auto;
-  margin-bottom: 24px;
-}
-
-.profile-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.profile-title {
-  font-family: 'Geist Mono', monospace;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.profile-text {
-  width: 240px;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  color: var(--gray);
-  line-height: 1.8;
-}
-
-.profile-bold {
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.profile-links {
-  margin-top: 24px;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  padding-left: 5px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  color: var(--black);
-}
-
-.profile-links a:hover{
-  text-decoration: underline 1.5px;
-  text-underline-offset: 3px;
-}
-
-/* ---------- 右側：作品內容 ---------- */
-.content {
-  width: 1000px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* 上方：分類 Link  */
-.filter-bar {
-  height: 25px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Geist Mono', monospace;
-  font-size: 12px;
-  color: var(--gray);
-  flex-shrink: 0;
-  border-top: 1px solid var(--blue);
-  margin-bottom: 20px;
-}
-
-.filter-separator {
-  color: var(--black);
-  font-size: 12px;
-  line-height: 1;
-}
-
-.filter {
-  color: var(--gray);
-}
-
-.filter:hover,
-.filter:focus-visible {
-  text-decoration: underline 1.5px;
-  text-underline-offset: 3px;
-}
-
-.filter.active {
-  color: var(--black);
-  font-weight: 600;
-}
-
-/* 下方：作品展示區（超出高度可捲動） */
-.works-scroll {
-  flex: 1;
   overflow-y: auto;
-  margin-top: 30px;
 }
 
-.works-scroll {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+.sidebar > * {
+  flex-shrink: 0;
 }
 
-.works-scroll::-webkit-scrollbar {
-  display: none;
+/* CD 圖片 */
+.cd {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  background-image: url("/images/ycl.jpg");
+  background-size: cover;
+  background-position: center;
+  transform-origin: center center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
-.works-grid {
+/* CD 中間的洞 */
+.cd::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 6px solid #fff;
+  background-color: var(--light);
+}
+
+.job {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 32px;
+}
+
+/* 導航 */
+.nav {
+  margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.nav a {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.0px;
+  padding: 2px 0;
+}
+
+/* hover 時文字底下變綠色 */
+.nav a:hover,
+.nav a[aria-current="page"] {
+  background-color: var(--green);
+}
+
+/* ===== 右側作品 ===== */
+.works {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;      /* 保留捲動，捲軸在下方統一隱藏 */
   padding-bottom: 40px;
 }
 
-/* 每張 Card：250 x 310 */
-.card {
-  width: 250px;
-  color: inherit;
+.work {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
 }
 
-/* 中間欄位的 Card 上下錯開 */
-.card-offset {
-  margin-top: 80px;
-}
-
-.card-image {
+.work-img {
+  display: block;
   width: 250px;
   height: auto;
-  overflow: hidden;
-  margin-bottom: 12px;
-  position: relative;
+  flex-shrink: 0;
 }
 
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.work-info {
   display: block;
 }
 
-/* 用藍色遮罩疊在照片上，保留照片的明暗細節 */
-.card-image::after {
-  content: "";
+.work-info:hover h3,
+.work-info:focus-visible h3 {
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.work-info h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.num {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-weight: 600;
+}
+
+.work-info p {
+  font-size: 10px;
+}
+
+/* 隱藏左右欄捲軸，保留滑鼠、觸控與鍵盤捲動 */
+.sidebar,
+.works {
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar,
+.works::-webkit-scrollbar {
+  display: none;
+}
+
+[hidden] { display: none !important; }
+
+.category-title {
+  font-family: "Geist Mono", monospace;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.about-text {
+  max-width: 480px;     /* 文字框最大寬度 */
+  padding: 0;          /* 框內留白 */
+  margin-bottom: 24px; /* 與下方內容的距離 */
+  color: var(--gray); 
+  font-size: 12px; 
+  line-height: 1.8;
+}
+
+.about-links {
+  font-family: "Geist Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.about-links a:hover,
+.about-links a:focus-visible {
+  background-color: var(--green);
+}
+
+.poster-preview {
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.poster-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 48px 20px 20px;
+  border: 0;
+  background: var(--light);
+  max-width: 94vw;
+  max-height: 94dvh;
+}
+
+.poster-dialog::backdrop { background: rgb(0 0 0 / 75%); }
+
+.poster-close {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light-blue);
-  mix-blend-mode: color;
-  transition: opacity 0.3s ease;
+  top: 4px;
+  right: 6px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: var(--dark);
+  font-size: 30px;
+  cursor: pointer;
 }
 
-/* 滑鼠移到作品連結上時，遮罩淡出，照片恢復原色 */
-.card:hover .card-image::after,
-.card:focus-visible .card-image::after {
-  opacity: 0;
+.poster-full {
+  display: block;
+  max-width: 100%;
+  max-height: calc(94dvh - 68px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
-.card-number {
-  font-family: 'Geist Mono', monospace;
-  font-size: 10px;
-  font-weight: 400;
-  color: var(--black);
-}
+/* 平板與手機：左右欄改為上下排列，使用整頁捲動 */
+@media (max-width: 1024px) {
+  html {
+    scrollbar-width: none;
+  }
 
-.card-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-}
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
 
-.card-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  color: var(--blue);
-  margin-top: 4px;
-}
-
-.card:hover .card-desc,
-.card:focus-visible .card-desc {
-  color: var(--black);
-}
-
-/* ========================================
-   RWD：小螢幕時作品改為垂直排列
-======================================== */
-@media (max-width: 900px) {
   body {
     height: auto;
     min-height: 100vh;
@@ -301,45 +317,42 @@ a {
   }
 
   .page {
-    width: 100%;
     height: auto;
     min-height: 100vh;
-    padding: 0 20px;
+    padding: 32px 24px;
   }
 
-  .header {
-    height: auto;
-    min-height: 80px;
-  }
-
-  .container {
-    width: 100%;
+  .main {
+    flex: none;
     flex-direction: column;
-    gap: 40px;
-    overflow: visible;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    gap: 48px;
   }
 
-  .profile,
-  .content {
+  .sidebar,
+  .works {
     width: 100%;
-  }
-
-  .content {
+    min-width: 0;
     overflow: visible;
   }
 
-  .works-scroll {
-    overflow: visible;
+  .works {
+    flex: none;
   }
 
-  .works-grid {
+  .work-img {
+    max-width: 100%;
+  }
+
+  .work-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  .work {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .card-offset {
-    margin-top: 0;
+    gap: 16px;
   }
 }

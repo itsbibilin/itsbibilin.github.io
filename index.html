@@ -1,156 +1,182 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yichen Lin — Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/geist-mono" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yichen Lin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- 網頁寬度設定1440px，左右padding 20px -->
   <div class="page">
 
-    <!-- ========== Header ========== -->
+    <!-- 上排：左邊名字、右邊聯絡方式（純文字） -->
     <header class="header">
       <h1 class="logo">Yichen Lin</h1>
-
-      <div class="header-contact">
+      <!-- <div class="contact">
         <div class="contact-item">
-          <p class="contact-label">INSTAGRAM</p>
-          <p class="contact-value">@staryyybook</p>
+          <span class="contact-label">INSTAGRAM</span>
+          <span class="contact-text">@xxxxx ↗</span>
         </div>
         <div class="contact-item">
-          <p class="contact-label">EMAIL</p>
-          <p class="contact-value">bi8446@gmail.com</p>
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-text">xxxx@gamil.com ↗</span>
         </div>
-      </div>
+      </div> -->
     </header>
 
-    <!-- ========== Main Container ========== -->
-    <div class="container">
+    <main class="main">
 
-      <!-- ---------- 左側：個人簡介（固定不動） ---------- -->
-      <aside class="profile">
-        <div class="profile-photo">
-          <img src="images/ycl.jpg" alt="Yichen Lin" />
-        </div>
+      <!-- 左側：照片、簡介、導航 -->
+      <aside class="sidebar">
+        <div class="cd" id="cd"></div>
 
-        <h2 class="profile-title">Visual &amp; Web Designer</h2>
+        <h2 class="job">Visual &amp; Web Designer</h2>
+        <!-- <p class="intro">
+          A Taiwan-based designer with cross-cultural experience in Japan and Korea,
+          focusing on UI/UX, Web Design, and front-end development,
+          with foundational knowledge of SEO/GEO.
+        </p> -->
 
-        <div class="profile-text">
-          <p>A Taiwan-based designer with cross-cultural experience in Japan and Korea, focusing on UI/UX, Web Design, and front-end development, with foundational knowledge of SEO/GEO.</p>
-        </div>
-
-        <div class="profile-links">
-          <a href="https://www.behance.net/itsbibilin" target="_blank" rel="noopener noreferrer">Behance ↗</a>
-          <a href="https://github.com/itsbibilin" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        </div>
+        <nav class="nav">
+          <a href="#about">ABOUT ME</a>
+          <a href="#web-ui" aria-current="page">WEB/UI</a>
+          <a href="#graphic">GRAPHIC</a>
+          <a href="#illustration">ILLUSTRATION</a>
+          <a href="#poster">POSTER</a>
+        </nav>
       </aside>
 
-      <!-- ---------- 右側：作品內容 ---------- -->
-      <div class="content">
+      <!-- 右側：作品列表（會出現卷軸） -->
+      <section class="works" id="works" aria-label="作品與個人介紹">
+        <div data-page="web-ui" id="web-ui">
 
-        <!-- 上方：分類 Link 列 -->
-        <nav class="filter-bar">
-          <a href="#" class="filter active" data-filter="web">WEB/UI</a><p class="filter-separator">,</p>
-          <a href="#" class="filter" data-filter="graphic">GRAPHIC</a><p class="filter-separator">,</p>
-          <a href="#" class="filter" data-filter="illustration">ILLUSTRATION</a><p class="filter-separator">,</p>
-          <a href="#" class="filter" data-filter="poster">POSTER</a>
-        </nav>
+        <!-- work 01 -->
+        <article class="work">
+          <img class="work-img color-blue" src="/images/nova-lab-LP.png" alt="nova lab LP" width="300" height="210" loading="lazy" decoding="async">
+          <a class="work-info" href="https://www.behance.net/gallery/257098393/NOVA-LAB-B2B-Website-Design-Development" target="_blank" rel="noopener noreferrer">
+            <h3><span class="num">01.</span>NOVA LAB</h3>
+            <p>Web Design / Development - 2026</p>
+          </a>
+        </article>
 
-        <!-- 下方：作品展示區（可滾動） -->
-        <div class="works-scroll">
-          <div class="works-grid">
+        <!-- work 02 -->
+        <article class="work">
+          <img class="work-img color-pink" src="/images/impf_web.png" alt="imperfect coffee website" width="300" height="210" loading="lazy" decoding="async">
+          <a class="work-info" href="https://www.behance.net/gallery/253843097/Imperfect-Coffee-Web-Design" target="_blank" rel="noopener noreferrer">
+            <h3><span class="num">02.</span> IMPERFECT COFFEE</h3>
+            <p>Web Design / Development - 2026</p>
+          </a>
+        </article>
 
-            <!-- WEB/UI SECTION -->
+        <!-- work 03 -->
+        <article class="work">
+          <img class="work-img color-yellow" src="/images/school_web.png" alt="japanese vocational school website" width="300" height="210" loading="lazy" decoding="async">
+          <a class="work-info" href="https://www.behance.net/gallery/253159263/Japanese-Vocational-School-Website-Redesign" target="_blank" rel="noopener noreferrer">
+            <h3><span class="num">03.</span>JAPANESE VOCATIONAL SCHOOL</h3>
+            <p>Web Design / Development - 2025</p>
+          </a>
+        </article>
 
-            <!-- Card 1 -->
-            <a class="card" data-category="web" href="https://www.behance.net/gallery/253843097/Imperfect-Coffee-Web-Design" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/impf_web.png" alt="Imperfect Coffee-website" />
-              </div>
-              <p class="card-number">01.<span class="card-name"> IMPERFECT COFFEE</span></p>
-              <p class="card-desc">Web Design / Development - 2026</p>
-            </a>
+        <!-- work 04 -->
+        <article class="work">
+          <img class="work-img color-blue" src="/images/loccitane_landing page.png" alt="loccitane landing page" width="300" height="210" loading="lazy" decoding="async">
+          <a class="work-info" href="https://www.behance.net/gallery/253784273/LOCCITANE-Osmanthus-Landing-Page-Design" target="_blank" rel="noopener noreferrer">
+            <h3><span class="num">04.</span>LOCCITANE LANDING PAGE</h3>
+            <p>Landing Page Design - 2024</p>
+          </a>
+        </article>
 
-            <!-- Card 2 -->
-            <a class="card card-offset" data-category="web" href="https://www.behance.net/gallery/253784273/LOCCITANE-Osmanthus-Landing-Page-Design" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/loccitane_landing page.png" alt="LOCCITANE-Osmanthus-Landing-Page-Design" />
-              </div>
-              <p class="card-number">02.<span class="card-name"> LOCCITANE</span></p>
-              <p class="card-desc">Landing Page Design - 2024</p>
-            </a>
+        <!-- <article class="work">
+          <img class="work-img color-pink" src="images/work-05.jpg" alt="作品 05 預覽" width="300" height="210" loading="lazy" decoding="async">
+          <a class="work-info" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+            <h3><span class="num">05.</span> IMPERFECT COFFEE</h3>
+            <p>Web Design / Development - 2026</p>
+          </a>
+        </article> -->
 
-            <!-- Card 3 -->
-            <a class="card" data-category="web" href="https://www.behance.net/gallery/253159263/Japanese-Vocational-School-Website-Redesign" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/school_web.png" alt="Japanese Vocational School Website Redesign" />
-              </div>
-              <p class="card-number">03.<span class="card-name">JAPANESE VOCATIONAL SCHOOL</span></p>
-              <p class="card-desc">Web Design / Development - 2025</p>
-            </a>
 
-            <!-- Card 4 -->
-            <a class="card" data-category="web" href="https://www.behance.net/gallery/257098393/NOVA-LAB-B2B-Website-Design-Development" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/nova-lab-LP.png" alt="NOVA LAB B2B Website Design Development" />
-              </div>
-              <p class="card-number">04.<span class="card-name">NOVA LAB</span></p>
-              <p class="card-desc">B2B Website Design / Development - 2026</p>
-            </a>
-
-            <!-- GRAPHIC SECTION -->
-            <a class="card" data-category="graphic" href="https://www.behance.net/gallery/254195055/IMPERFECT-COFFEE-Brand-Identity" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/impf_brand identity.png" alt="Imperfect Coffee Brand Identity" />
-              </div>
-              <p class="card-number">01.<span class="card-name">IMPERFECT COFFEE</span></p>
-              <p class="card-desc">Brand Identity - 2025</p>
-            </a>
-
-            <a class="card" data-category="graphic" href="https://www.behance.net/gallery/255403057/Hong-Kong-City-Rebranding?" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/hk_city rebranding.png" alt="HK City Rebranding" />
-              </div>
-              <p class="card-number">02.<span class="card-name">Hong Kong</span></p>
-              <p class="card-desc">City Rebranding - 2025</p>
-            </a>
-
-            <!-- ILLUSTRATION SECTION -->
-
-            <!-- Card 1 -->
-            <a class="card card-offset" data-category="illustration" href="https://www.behance.net/gallery/254294453/I-LOVE-SEOUL-illustration" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/illu_seoul.png" alt="I LOVE SEOUL Illustration" />
-              </div>
-              <p class="card-number">01.<span class="card-name">I LOVE SEOUL</span></p>
-              <p class="card-desc">Illustration - 2024</p>
-            </a>
-
-            <!-- Card 2 -->
-            <a class="card" data-category="illustration" href="https://www.behance.net/gallery/254310769/EVERYDAY-MOMENTS-illustration" target="_blank" rel="noopener noreferrer">
-              <div class="card-image">
-                <img src="images/illu_everyday-moments.png" alt="EVERYDAY MOMENTS Illustration" />
-              </div>
-              <p class="card-number">02.<span class="card-name">EVERYDAY MOMENTS</span></p>
-              <p class="card-desc">Illustration - 2024</p>
-            </a>
-
-          </div>
         </div>
+        
+        <!-- ABOUT ME -->
+        <section data-page="about" id="about" hidden aria-labelledby="about-title">
+          <h2 id="about-title" class="category-title">Hello! I'm Yichen Lin.</h2>
+          <p class="about-text">I hold a Master's degree in Visual Communication Design from Hongik University in South Korea, with experience studying and working in Japan.
+            <br>
+            <br>My background spans branding, visual design, UI/UX, and web design, with hands-on experience in responsive web development. I'm also exploring SEO, GEO, and AI-powered design tools to create meaningful, user-centered digital experiences.</p>
+          
+          <div class="about-links">
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+            <a href="https://www.behance.net/itsbibilin" target="_blank" rel="noopener noreferrer">Behance ↗</a>
+            <a href="https://github.com/itsbibilin" target="_blank" rel="noopener noreferrer">Github ↗</a>
+          </div>
+        
+        </section>
+        
 
-      </div>
-    </div>
+        <!-- GRAPHIC DESIGN -->
+        <section data-page="graphic" id="graphic" hidden aria-label="GRAPHIC">
+          <article class="work">
+            <img class="work-img" src="images/hk_city rebranding.png" alt="HK City Rebranding" loading="lazy" decoding="async">
+            
+            <a class="work-info" href="https://www.behance.net/gallery/255403057/Hong-Kong-City-Rebranding" target="_blank" rel="noopener noreferrer">
+              <h3><span class="num">01.</span> HK CITY REBRANDING</h3>
+              <p>Brand Identity / 2025</p>
+            </a>
+          </article>
+          <article class="work">
+            <img class="work-img" src="images/impf_brand identity.png" alt="IMPERFECT COFFEE Brand Identity" loading="lazy" decoding="async">
+            
+            <a class="work-info" href="https://www.behance.net/gallery/254195055/IMPERFECT-COFFEE-Brand-Identity" target="_blank" rel="noopener noreferrer">
+              <h3><span class="num">02.</span> IMPERFECT COFFEE BRAND IDENTITY</h3>
+              <p>Brand Identity / 2025</p>
+            </a>
+          </article>
+        </section>
+
+        <!-- ILLUSTRATION -->
+        <section data-page="illustration" id="illustration" hidden aria-label="ILLUSTRATION">
+          <article class="work">
+            <img class="work-img" src="images/illu_seoul.png" alt="Seoul" loading="lazy" decoding="async">
+            <a class="work-info" href="https://www.behance.net/gallery/254294453/I-LOVE-SEOUL-illustration" target="_blank" rel="noopener noreferrer">
+              <h3><span class="num">01.</span> SEOUL</h3>
+              <p>2024</p>
+            </a>
+          </article>
+
+          <article class="work">
+            <img class="work-img" src="images/illu_everyday-moments.png" alt="Everyday Moments" loading="lazy" decoding="async">
+            <a class="work-info" href="https://www.behance.net/gallery/254310769/EVERYDAY-MOMENTS-illustration" target="_blank" rel="noopener noreferrer">
+              <h3><span class="num">03.</span> EVERYDAY MOMENTS</h3>
+              <p>2024</p>
+            </a>
+          </article>
+
+          <article class="work">
+            <img class="work-img" src="images/illu_blackhumor.png" alt="Black Humor" loading="lazy" decoding="async">
+            <a class="work-info" href="https://www.behance.net/gallery/254310883/Oops-Thats-Life-illustration" target="_blank" rel="noopener noreferrer">
+              <h3><span class="num">02.</span> BLACK HUMOR</h3>
+              <p>2025</p>
+            </a>
+          </article>
+
+        </section>
+        <section data-page="poster" id="poster" hidden aria-labelledby="poster-title">
+          <h2 id="poster-title" class="category-title">POSTER</h2>
+          <article class="work"><button class="poster-preview" type="button" aria-label="放大 Poster 01"><img class="work-img" src="images/poster1.jpg" alt="Poster 01" loading="lazy" decoding="async"></button></article>
+          <article class="work"><button class="poster-preview" type="button" aria-label="放大 Poster 02"><img class="work-img" src="images/poster2.png" alt="Poster 02" loading="lazy" decoding="async"></button></article>
+        </section>
+      </section>
+    </main>
   </div>
 
-  <script src="js/filter.js"></script>
+  <dialog class="poster-dialog" aria-label="海報放大預覽">
+    <button class="poster-close" type="button" aria-label="關閉海報預覽" autofocus>×</button>
+    <img class="poster-full" alt="">
+  </dialog>
 
+  <script src="js/filter.js" defer></script>
 </body>
 </html>
