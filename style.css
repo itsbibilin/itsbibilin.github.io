@@ -193,13 +193,14 @@ a {
   display: block;
 }
 
-.work-info:hover h3,
+.work-info h3:hover,
 .work-info:focus-visible h3 {
-  text-decoration: none;
-  text-underline-offset: 4px;
+  background-color: var(--green);
+  color: var(--dark);
 }
 
 .work-info h3 {
+  width: fit-content;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 10px;
